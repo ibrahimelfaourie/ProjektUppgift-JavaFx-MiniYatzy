@@ -14,10 +14,10 @@ public class Game {
     int[] playerTwoScores;
 /*
     public static  void playOneGame(String name1 , int[] player1Score, String name2, int[] player2Score, Scanner scan) {
-        // play the game in turns
+        // spela spelet i omgångar
         int turns = 0;
 
-        // the game has one turn for every possible outcome
+
         while (turns<TURNS){
 
             // players alternate playing
@@ -33,7 +33,7 @@ public class Game {
 
         }
 
-        // find the winner
+        // räkna ut vinnare
         int score1 = Score.calculateTotalScore(player1Score);
         System.out.println(name1 + " your score is " + score1);
         int score2 = Score.calculateTotalScore(player2Score);
@@ -52,28 +52,28 @@ public class Game {
 
         int[] dice = new int[DICE];
 
-        // show the user their score card
+
         Score.showCurrentScoreCard(score);
 
-        // roll all of the dices
+
         Dice.rollAllDice(dice);
 
-        // show the dice to the user
+
         Dice.showDice(dice);
 
-        // let them reroll dice
+
         Dice.reRollDice(dice, scan);
 
-        // show the dice to the user
+
         Dice.showDice(dice);
 
-        // let them reroll the dice again
+
         Dice.reRollDice(dice, scan);
 
-        // show the user the dice
+
         Dice.showDice(dice);
 
-        // ask them for a category to score
+        // Vifrågar spelaren vilken kategore att spara i
         System.out.println("which category would you like to score in");
         int category = scan.nextInt(); // unit indexed
         scan.nextLine();
@@ -86,7 +86,7 @@ public class Game {
             scan.nextLine(); //
             category = category -1; // zero indexed
         }
-        // score the category
+        // spara i kategorin
         score[category] = Dice.sumOfDice(dice, category+1); // category is unit indexed in the method
 */
     }

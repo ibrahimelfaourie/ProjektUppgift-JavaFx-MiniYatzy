@@ -217,7 +217,7 @@ public class Controller {
     }
 
 
-    //
+    // spara ettor
     public void kategoriEttSpelareEtt(ActionEvent event) {
         scorePlayer1[0] = Dice.sumOfDice(dice, 1);
         sparaEttor1 = (Button) event.getSource();
@@ -391,7 +391,7 @@ public class Controller {
         updateScore();
         uncheckBoxes();
     }
-
+// spara chance
     public void kategoriChanceSpelareEtt(ActionEvent event) {
         scorePlayer1[TURNS - 1] = Score.calculateChance(dice);
         playedTurns = playedTurns + 1;
@@ -417,7 +417,7 @@ public class Controller {
         uncheckBoxes();
 
     }
-
+// metod som tar bort klickade checkboxar för ny omgång
     public void uncheckBoxes() {
         valjEtt.setSelected(false);
         valjTva.setSelected(false);
@@ -425,7 +425,7 @@ public class Controller {
         valjFyra.setSelected(false);
         valjFem.setSelected(false);
     }
-
+    // kontrollerar att vi ligger under 14 omgångar,reseter kastaknappen, kontrollerar vems tur det är, kontrollerar vinnare
     public void updateScore() {
         if (playedTurns < 14) {
             kastaAlla.setDisable(false);
@@ -447,12 +447,12 @@ public class Controller {
         }
     }
 
-
+// sätter namn
     public void setPlayerNames(String spelare1, String spelare2) {
         this.spelare1 = spelare1;
         this.spelare2 = spelare2;
     }
-
+// visar namn i poaängtabbel
     public void showPlayer1name(ActionEvent event) {
         spelare1 = textField1.getText();
 
@@ -465,7 +465,7 @@ public class Controller {
 
         spelare2Namn.setText(spelare2);
     }
-
+// öppnar alla knappar och resetar alla resultat för att kunna spela ett nytt spel
     public void spelaNyttSpel() {
         score1 = 0;
         score2 = 0;

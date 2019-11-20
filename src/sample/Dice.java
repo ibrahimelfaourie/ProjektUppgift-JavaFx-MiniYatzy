@@ -10,12 +10,11 @@ public class Dice {
     final static int DICE = 5;
     final static int TURNS = 6;
 
-   // Den räknar ut total poän för en kategori
+   // Den räknar ut total poäng för en kategori
     public static int sumOfDice(int[] dice, int number){
         int sum = 0;
         int index = 0;
         while (index<dice.length){
-            //only dice that equal the given number counts
             if(dice[index] == number){
                 sum = sum+dice[index];
             }
