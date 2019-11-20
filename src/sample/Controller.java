@@ -131,7 +131,6 @@ public class Controller {
     Label showDicesText = new Label();
 
 
-
     // Anropar metoden rollAllDice och printar ut det i Labeln "showDicesText"
     // sedan på runda 2 och 3 gör vi en reroll där vi väljer vad vi ska kasta
     public void kastaAllaTarningar(ActionEvent event) {
@@ -154,7 +153,8 @@ public class Controller {
 
 
     }
-// reroll metod som vi använder i kastaAllatärningar
+
+    // reroll metod som vi använder i kastaAllatärningar
     public void kastaIgen() {
         for (int i = 0; i < DICE; i++) {
             if (reRoll[i]) {
@@ -405,9 +405,6 @@ public class Controller {
     }
 
 
-
-
-
     public void kategoriChanceSpelareTva(ActionEvent event) {
         scorePlayer2[TURNS - 1] = Score.calculateChance(dice);
         playedTurns = playedTurns + 1;
@@ -421,20 +418,21 @@ public class Controller {
 
     }
 
-    public void uncheckBoxes(){
+    public void uncheckBoxes() {
         valjEtt.setSelected(false);
         valjTva.setSelected(false);
         valjTre.setSelected(false);
         valjFyra.setSelected(false);
         valjFem.setSelected(false);
     }
-    public void updateScore(){
+
+    public void updateScore() {
         if (playedTurns < 14) {
             kastaAlla.setDisable(false);
             kastaAlla.setText("Kasta");
-            if(playedTurns%2==0) {
+            if (playedTurns % 2 == 0) {
                 showDicesText.setText(spelare1 + " Det är din tur");
-            }else{
+            } else {
                 showDicesText.setText(spelare2 + ", det är din tur");
             }
         } else {
@@ -448,9 +446,6 @@ public class Controller {
             }
         }
     }
-
-
-
 
 
     public void setPlayerNames(String spelare1, String spelare2) {
@@ -526,14 +521,6 @@ public class Controller {
 
     }
 
-    public void bytScen(ActionEvent event) throws IOException {
-
-        Parent testParent = FXMLLoader.load(getClass().getResource("test.fxml"));
-        Scene testScene = new Scene(testParent);
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setScene(testScene);
-        window.show();
-
-    }
 
 }
+
